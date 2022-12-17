@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,500&display=swap');
 
+
 *{
     margin: 0;
     padding: 0;
@@ -7,15 +8,18 @@
     font-family: 'Poppins', sans-serif;
 }
 
-body{
-    background: rgb(235,235,235);
+body {
+  background-color: rgb(206, 209, 209);
 }
 nav .wrapper{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
-    padding: 2rem;
+    
+    padding-top: 1;
+    padding-bottom: 1;
+    padding-left: 1rem;
+    padding-right: 1rem;
     background: #fff;
 }
 
@@ -29,16 +33,20 @@ nav .wrapper .right{
 
 
 nav .wrapper .logo i{
-    font-size: 2.5rem;
-    color:  #0a66c2;
+    
+    color:  #2a2c2e;
+    align-items: center;
 }
+
+
 
 /* Style The Dropdown Button */
 .dropbtn {
     background-color: #4CAF50;
     color: white;
     padding: 16px;
-    font-size: 16px;
+    margin-top: 10px;
+    align-items: center;
     border: none;
     cursor: pointer;
   }
