@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>lawyer and client</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width , initial-scale= 1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel = "stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="qanda.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Black+Han+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Coda+Caption:800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Paaji" rel="stylesheet">
+
+</head>
+<body>
+<!--The navigation bar-->
+<nav class="navbar navbar-inverse"> `
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#NavMenu">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        
+        
+        <a class="navbar-brand" ></a><img src="/IMAGE/wonder.png" height="50" width="60"/></a>
+        </div>
+        <div class = "collapse navbar-collapse" id="NavMenu">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="Archanaaaaaa.html">LAWYER</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li class="active"><a href="from git.html">Q&A</a></li>
+                <li><a href="REVIEW.html">REVIEWS</a></li>
+                <li><a href="profile.html">ACCOUNT</a></li>
+                <li><a href="#">LOCATION</a></li>
+               
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <form action="includes/logout-include.php" method="POST">
+                    <li><button class="logout-btn" type="submit" name="submit">LOG OUT</button></li>
+                </form>
+            </ul>
+    </div>
+</nav>
+<div class=" container-fluid text-justify" style="font-family: 'Black Han Sans',sans-serif; font-size: 200%">
+    <?php
+
+        session_start();
+        if(isset($_SESSION['u_id'])){
+            echo strtoupper ("HEY! HI ".$_SESSION['u_first'].":)" ."<div style='text-align: center'>QUESTION AND ANSWERS</div>");
+        }
+    ?>
+</div>
+<div class="container-fluid" style="background-image: url(/IMAGE/background-ques.jpg);background-repeat: no-repeat;">
+    <div class="col-md-12 col-sm-12 col-xs-12">
+        <form class="form-container" action="includes/askquestion-include.php" method="POST">
+            <br><br><br>    
+            <h1 style="text-align: center;color: rgb(221, 241, 240); font-family: 'Coda Caption', sans-serif;margin-top: 5px">ALL YOUR QUESTIONS WILL BE ANSWERED </h1>
+            <br><br> 
+            <div class="form-group">
+            <textarea class="form-control"  style="min-width:100%;color: rgb(15, 14, 14);border-color: black;background-color: rgb(243, 243, 227);;font-size: 20px;border-width: 0 0 0 0; text-align: center;margin-left: 0% ;height: 20vh; font-family: 'Gill Sans', sans-serif cursive;
+                " type="text" id="form1" class="md-textarea form-control" rows="15" placeholder="ENTER YOUR QUESTION HERE" name="ques"></textarea><br>
+            <button type="submit" name="submit" class="btn" style="background-color: rgb(251, 210, 0);float: right ;margin-bottom: 3vh">SUBMIT</button>
+        </form>
+    </div>
+</div>
+</div>      
+<hr/>
+<footer class="container-fluid text-center">
+    <div class="row">   
+        <div class="col-sm-4">
+            <h3>Contact Us :</h3>
+            <br>
+            <h4>PHONE NUMBER:1234567890<br>E-MAIL:..........</h4>
+        </div>
+        <div class="col-sm-4">
+            <h3>CONNECT WITH US </h3>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-google"></a>
+            <a href="#" class="fa fa-youtube"></a>
+            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#" class="fa fa-twitter"></a>
+        </div>
+        <div class="col-sm-4">
+            <img src="2" class="icon">
+        </div>
+    </div>
+</footer>
+</body>
+</html>
